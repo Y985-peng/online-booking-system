@@ -1,0 +1,157 @@
+/* ===== 桌面端响应式样式 >= 768px ===== */
+@media (min-width: 768px) {
+  body { background: #f0f2f5; }
+
+  /* 桌面端圆角 */
+  .desktop-layout .main-content {
+    border-radius: 0;
+  }
+
+  .desktop-layout .van-cell-group {
+    border-radius: 10px !important;
+    overflow: hidden;
+  }
+
+  .desktop-layout .van-card {
+    border-radius: 10px !important;
+    overflow: hidden;
+  }
+
+  .desktop-layout .van-search {
+    border-radius: 10px;
+  }
+
+  .desktop-layout .van-swipe {
+    border-radius: 10px;
+  }
+
+  .van-popup--center {
+    border-radius: 14px !important;
+  }
+
+  /* 主内容区 */
+  .desktop-layout .main-content {
+    padding: 24px;
+    background: #f5f6fa;
+  }
+
+  /* 页面内容容器 */
+  .main-content > .app-container,
+  .main-content > div {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* 底部弹出改为居中弹窗 */
+  .desktop-layout .van-popup--bottom {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    bottom: auto !important;
+    max-width: 520px !important;
+    width: 90% !important;
+    border-radius: 12px !important;
+    max-height: 80vh !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
+  }
+
+  /* 个人页卡片化 */
+  .desktop-layout .van-cell-group {
+    margin: 0 auto 16px !important;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .desktop-layout .van-cell {
+    font-size: 15px !important;
+  }
+
+  /* 服务卡片美化 */
+  .desktop-layout .van-card {
+    margin: 12px auto !important;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .desktop-layout .van-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+  /* 按钮加大 */
+  .desktop-layout .van-button { height: 44px !important; font-size: 15px !important; }
+
+  /* 标签栏（van-tabs） */
+  .desktop-layout .van-tabs { margin: 0 auto; max-width: 960px; }
+
+  /* 首页搜索框 */
+  .desktop-layout .van-search { max-width: 600px; margin: 0 auto; }
+
+  /* 服务详情 */
+  .desktop-layout .van-swipe { border-radius: 8px; overflow: hidden; }
+
+  /* 表单字段 */
+  .desktop-layout .van-field { font-size: 15px !important; }
+
+  /* 列表页面 */
+  .desktop-layout .van-pull-refresh { max-width: 960px; margin: 0 auto; }
+
+  /* 订单页 */
+  .desktop-layout .van-tabs__wrap { background: #fff; }
+
+  /* 登录页 */
+  .login-page { padding: 40px !important; }
+  .login-box { max-width: 400px !important; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; }
+
+  /* 居中弹窗 */
+  .van-popup--center {
+    border-radius: 12px !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
+  }
+
+  /* 帖子列表 */
+  .desktop-layout [class*="PostList"] > div {
+    max-width: 640px;
+    margin: 0 auto !important;
+  }
+
+  /* 动态发布页 */
+  .desktop-layout .van-action-sheet {
+    max-width: 520px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border-radius: 12px 12px 0 0 !important;
+  }
+
+  /* 聊天页面 */
+  .desktop-layout .van-cell-group { max-width: 100%; }
+
+  /* 管理后台 */
+  .desktop-layout [style*="grid-template-columns"] { max-width: 800px; margin: 0 auto; }
+
+  /* van-nav-bar 在桌面端隐藏 */
+  .desktop-layout .van-nav-bar { display: none !important; }
+}
+
+
+
+/* 服务详情 - 桌面端 */
+@media (min-width: 768px) {
+  .service-detail-page {
+    max-width: 800px;
+    margin: 0 0 0 auto;
+  }
+  
+
+  .service-detail-page .booking-btn {
+    height: 52px !important;
+    font-size: 17px !important;
+  }
+
+  .service-detail-page [style*="margin:16px 10px"] {
+    padding: 0 20px;
+  }
+
+  .service-detail-page [style*="margin:0 10px 16px"] {
+    padding: 0 20px;
+  }
+
+  /* 联系客服 FAB - 桌面端在内容区右侧 */
+}

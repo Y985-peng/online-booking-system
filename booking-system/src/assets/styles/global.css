@@ -1,0 +1,125 @@
+/* 重置内外边距 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  background: #f7f8fa;
+}
+
+.app-container {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #fff;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+/* 平板适配 */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+  font-size: 14px;
+    padding: 0 20px;
+    background: #eee;
+  }
+}
+
+/* ---------- PC 适配（填满屏幕） ---------- */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 37.5px !important;
+  }
+
+  .app-container {
+    max-width: 100%;           /* 取消宽度限制，填满屏幕 */
+    margin: 20px auto;
+    padding: 20px 30px;        /* 左右留边距，避免内容贴边 */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+
+  body {
+  font-size: 14px;
+    background: #e9ecef;
+    padding: 0 20px;           /* 整体页面左右留白 */
+  }
+
+  /* Vant 组件在 PC 上的通用调整 */
+  .van-cell-group--inset {
+    margin: 16px 0;
+  }
+
+  .van-card {
+    margin-bottom: 16px;
+  }
+
+  .van-card__content {
+    padding: 12px 16px;
+  }
+
+  .van-search {
+    padding: 16px 0;
+  }
+
+  .van-dialog {
+    width: 420px;
+  }
+  .van-popup {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* 区间过渡：768px → 1600px 根字体从 37.5px 过渡到 112.5px */
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  html {
+    font-size: calc(37.5px + (112.5 - 37.5) * ((100vw - 768px) / (1599 - 768))) !important;
+  }
+}
+
+/* 超大屏固定根字体上限，同时增加容器内边距 */
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 112.5px !important;
+  }
+  .app-container {
+    padding: 30px 60px;        /* 超大屏左右留更多边距，保持阅读舒适 */
+  }
+}
+
+/* 额外：如果希望完全不留边距，可去掉 body 的 padding，但建议保留少量 */
+/* ===== 统一主题色 ===== */
+/* 导航栏颜色: #1a1a2e, 主色调取同色系浅色: #5c6bc0 */
+:root {
+  --primary: #5c6bc0;
+  --primary-light: #7c8cdb;
+  --primary-dark: #3949ab;
+  --primary-bg: #eef0f8;
+}
+
+/* Vant 组件主题覆盖 */
+.van-button--primary {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.van-tabbar-item--active {
+  color: var(--primary) !important;
+}
+.van-tabbar-item--active .van-tabbar-item__icon {
+  background: rgba(92,107,192,0.1) !important;
+}
+.van-tabbar-item--active::after {
+  background: var(--primary) !important;
+}
+.van-rate__icon--full {
+  color: var(--primary) !important;
+}
+.van-tag--primary {
+  background: var(--primary) !important;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "预约系统",
+  "short_name": "预约系统",
+  "description": "在线预约服务系统",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f1f0e8",
+  "theme_color": "#5c6bc0",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
